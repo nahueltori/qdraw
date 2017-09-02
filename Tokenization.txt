@@ -1,0 +1,30 @@
+Token types
+
+SKIP		Comments and whitespaces
+LCURL		{
+RCURL		}
+LPAREN		(
+RPAREN		)
+NUMBER		Natural numbers
+IDENTIFIER	Language keywords and user's names
+
+
+List of Language keywords
+programa
+procedimiento
+arr
+aba
+der
+izq
+N
+V
+R
+X
+?
+=
+$
+repetir
+veces
+si
+entonces
+sino

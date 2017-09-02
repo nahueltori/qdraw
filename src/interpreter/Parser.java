@@ -1,6 +1,6 @@
 package interpreter;
 
-public class Tokenize{
+public class Parser{
 
 	
 }

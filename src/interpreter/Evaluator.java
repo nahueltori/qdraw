@@ -1,6 +1,6 @@
 package interpreter;
 
-public class Evaluate{
+public class Evaluator{
 
 	
 }
