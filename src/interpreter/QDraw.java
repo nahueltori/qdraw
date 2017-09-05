@@ -16,10 +16,10 @@ public class QDraw{
 		entorno = new String(Files.readAllBytes(Paths.get(args[1])), StandardCharsets.UTF_8);
 		
 		//Cargamos el entorno a la memoria de trabajo
-		cargarEntorno();
+		//cargarEntorno();
 		
 		
-		//Procesamos el código fuente y obtenemos los tokens predefinidos
+		//Procesamos el código fuente y obtenemos los tokens del lenguaje
 		try{
 			tokenizer.tokenize(codigo);
 		}
@@ -27,7 +27,9 @@ public class QDraw{
 			System.out.println(e.getMessage());
 		}
 		
-		
+		for (Tokenizer.Token tok : tokenizer.getTokens()) {
+			System.out.println("" + tok.token + " " + tok.sequence);
+		}
 	}
 
 	private void addTokens(Tokenizer tokenizer){
