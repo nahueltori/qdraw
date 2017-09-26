@@ -1,7 +1,9 @@
 package interpreter;
 
 import java.util.regex.Pattern;
-
+import java.util.LinkedList;
+import java.text.ParseException;
+import java.util.regex.Matcher;
 
 public class Tokenizer{
 
@@ -41,8 +43,9 @@ public class Tokenizer{
 			Pattern.compile("^("+regex+")"), token) );
 	}
 
-	public void tokenize(String str) {
+	public void tokenize(String str) throws ParseException {
 		String s = new String(str);
+		int posicion = 0;
 		tokens.clear();
 		
 		while (!s.equals("")) {
@@ -54,13 +57,14 @@ public class Tokenizer{
 					
 					String tok = m.group().trim();
 					tokens.add(new Token(info.token, tok));
+					posicion += tok.length();
 					
 					s = m.replaceFirst("");
 					break;
 				}
 			}
 			
-			if (!match) throw new ParserException("Caracter inesperado: "+s);
+			if (!match) throw new ParseException("Caracter inesperado: "+s, posicion);
 		}
 	}
 

@@ -1,0 +1,8 @@
+interpreter\Tokenizer$Token.class
+interpreter\Evaluator.class
+interpreter\Parser.class
+interpreter\Tokenizer.class
+interpreter\QDrawController.class
+interpreter\Tokenizer$TokenInfo.class
+interpreter\Application.class
+interpreter\QDraw.class
